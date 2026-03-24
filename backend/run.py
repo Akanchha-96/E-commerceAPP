@@ -11,7 +11,7 @@ from app.models.tables import create_tables
 
 app = Flask(__name__)
 
-CORS(app, origins=["http://localhost:3000"], supports_credentials=True)
+CORS(app, origins=["*"], supports_credentials=True)
 
 app.register_blueprint(auth_bp)
 app.register_blueprint(product_bp)
