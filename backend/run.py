@@ -19,6 +19,10 @@ app.register_blueprint(cart_bp)
 app.register_blueprint(order_bp)
 app.register_blueprint(user_bp)
 
+@app.route("/")
+def home():
+    return "E-commerce Backend is running"
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
